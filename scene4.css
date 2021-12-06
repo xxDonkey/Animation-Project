@@ -1,0 +1,51 @@
+:root {
+    --background-scale: 1.65;
+    --anim-time: 20s;
+}
+
+.background {
+    width: calc(900px * var(--background-scale));
+    height: auto;
+    position: absolute;
+    z-index: -1;
+}
+
+.ui {
+    z-index: -1;
+    position: absolute;
+    top: calc(50px + 360px * var(--background-scale));
+}
+
+a {
+    padding: 0px 15px;
+}
+
+.tortoise {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+
+    width: 100px;
+    height: auto;
+    position: relative;
+    z-index: 1;
+
+    top: 380px;
+    left: 150px;
+}
+
+.endline {
+    transform: perspective(400px) rotateY(-45deg);
+    width: 180px;
+    position: relative;
+
+    top: 350px;
+    left: 1100px;
+}
+
+
+@keyframes tortoise_run {
+    0% { left: 150px; }
+    100% { left: calc(900px * var(--background-scale)); }
+}
+
+
