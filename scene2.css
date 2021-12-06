@@ -1,0 +1,61 @@
+:root {
+    --background-scale: 1.65;
+    --anim-time: 20s;
+}
+
+.background {
+    width: calc(900px * var(--background-scale));
+    height: auto;
+    position: absolute;
+    z-index: -1;
+}
+
+.ui {
+    z-index: -1;
+    position: absolute;
+    top: calc(50px + 360px * var(--background-scale));
+}
+
+a {
+    padding: 0px 15px;
+}
+
+.hare-running {
+    width: 100px;
+    height: auto;
+    position: relative;
+    z-index: 1;
+
+    top: 450px;
+    left: 40px;
+}
+
+.think {
+    width: 80px;
+    height: auto;
+    position: relative;
+    z-index: 2;
+
+    top: 305px;
+    left: 125px;
+}
+
+.think-text {
+    position: absolute;
+    top: 40%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes hare_run {
+    0% { left: 40px; }
+    25% { left: calc(40px + 900px * var(--background-scale)); }
+    100% { left: calc(40px + 900px * var(--background-scale)); }
+}
+
+@keyframes think_move {
+    0% { left: 125px; }
+    25% { left: calc(125px + 900px * var(--background-scale)); }
+    100% { left: calc(125px + 900px * var(--background-scale)); }
+}
+
