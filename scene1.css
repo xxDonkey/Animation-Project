@@ -1,0 +1,48 @@
+:root {
+    --background-scale: 1.65;
+}
+
+.background {
+    width: calc(900px * var(--background-scale));
+    height: calc(360px * var(--background-scale));
+    position: absolute;
+    z-index: -1;
+}
+
+.tortoise {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+
+    width: 100px;
+    height: auto;
+    position: relative;
+    z-index: 1;
+
+    top: 380px;
+    left: 150px;
+    
+    
+}
+
+@keyframes tortoise_run {
+    0% { top: 380px; left: 150px; }
+    100% { top: 380px; left: 1500px; }
+}
+
+@keyframes hare_run {
+    0% { top: 380px; left: 150px; }
+    100% { top: 380px; left: 1500px; }
+}
+
+.hare {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+
+    width: 100px;
+    height: auto;
+    position: relative;
+    z-index: 1;
+
+    top: calc(230px * var(--background-scale));
+    left: calc(50px * var(--background-scale));
+}
